@@ -240,7 +240,7 @@ uint1024_t mult_op(uint1024_t x, uint1024_t y) {
     uint1024_t res = from_uint(0);
 
     // Find greatest 1 bit in y
-    int y_max_bit_idx = get_greatest_bit_idx(y);    // lowest bit has index 0        
+    int y_max_bit_idx = get_greatest_bit_idx(y);    // lowest bit has index 1023  
     if (y_max_bit_idx == -1) {
         printf("y is 0\n");        
         return res; // y = 0
