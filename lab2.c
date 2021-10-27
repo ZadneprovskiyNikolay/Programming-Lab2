@@ -242,7 +242,6 @@ uint1024_t mult_op(uint1024_t x, uint1024_t y) {
     // Find greatest 1 bit in y
     int y_max_bit_idx = get_greatest_bit_idx(y);    // lowest bit has index 1023  
     if (y_max_bit_idx == -1) {
-        printf("y is 0\n");        
         return res; // y = 0
     }
     
@@ -463,6 +462,7 @@ void test_printf_and_scanf() {
 int main() {
     read_pow2_nums(); 
 
+    printf("sizeof(uint1024_t) = %d bits\n\n", sizeof(uint1024_t) * 8);
     test_mult_op();
     test_subtr_op();
     test_add_op();
